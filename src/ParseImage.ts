@@ -10,14 +10,13 @@ export default class ParseImage {
 
     private filename: string;
     private data: Buffer;
-    private contentType: string;
 
     constructor(filename: string, data: Buffer, contentType?: string) {
         this.filename = filename
         this.data = data
-        this.contentType = contentType || mime.getType(filename)
+        const type = contentType || mime.getType(filename)
 
-        if (!contentType.startsWith('image/')) {
+        if (!type.startsWith('image/')) {
             throw new Parse.Error(Parse.Error.INCORRECT_TYPE, `It seems that ${filename} is not a image and cannot be processed.`)
         }
     }

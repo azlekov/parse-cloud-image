@@ -78,4 +78,13 @@ At the end the closure must return `Buffer` from the chain of actions which will
 
 ## Advanced usage
 
-In some cases you would need option to manipulate in parallel image or create multiple different changes on different `clones` of the image. This can be done with `sharp` and the `process` method of `ParseImae` which can return a `Sharp` instances which can be piped. 
+In some cases you would need option to manipulate in parallel image or create multiple different changes on different `clones` of the image. This can be done with `sharp` and the `process` method of `ParseImae` which can return a `Sharp` instances which can be piped.
+
+```ts
+const file = bucket.file("image.jpg").createWriteStream()
+const image = ParseImage.from(parseFile)
+
+...
+
+image.process(sharp => sharp.resize(width, height)).pipe(file)
+```
