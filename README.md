@@ -66,11 +66,11 @@ image.scale(1.0, 0.5)
 
 ### Edit and process
 
-These methods are the heart of the `ParseImage` because give elegant access to all capabilities of `sharp` over given `ParseFile`. Let's say you need to flip and rotate the image. This can be done like this:
+These methods are the heart of the `ParseImage` giving elegant access to all capabilities of `sharp` over given `ParseFile`. Let's say you need to flip and rotate the image. This can be done like this:
 
 ```ts
 const image = ParseImage.from(parseFile)
-const processedImage = await this.edit(proc => proc.flip().rotate().toBuffer())
+const processedImage = await image.edit(proc => proc.flip().rotate().toBuffer())
 }
 ```
 
@@ -78,7 +78,7 @@ At the end the closure must return `Buffer` from the chain of actions which will
 
 ## Advanced usage
 
-In some cases you would need option to manipulate in parallel image or create multiple different changes on different `clones` of the image. This can be done with `sharp` and the `process` method of `ParseImae` which can return a `Sharp` instances which can be piped.
+In some cases you would need option to manipulate in parallel image or create multiple different changes on different `clones` of the image. This can be done with `sharp` and the `process` method of `ParseImae` providing a `Sharp` instances which can be piped.
 
 ```ts
 const file = bucket.file("image.jpg").createWriteStream()
