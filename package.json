@@ -28,7 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/express": "^4.17.13",
-    "@types/node": "~16.14.2",
+    "@types/node": "~16.11.26",
     "@types/parse": "^2.18.13",
     "@types/sharp": "^0.30.0",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
