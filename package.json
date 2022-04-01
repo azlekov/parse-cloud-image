@@ -1,6 +1,6 @@
 {
   "name": "parse-cloud-image",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parse Server Cloud module for image manipulation using sharp",
   "repository": {
     "type": "git",
