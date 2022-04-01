@@ -48,5 +48,8 @@
   "dependencies": {
     "mime": "^3.0.0",
     "sharp": "^0.30.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
