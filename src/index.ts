@@ -1,5 +1,3 @@
-import ParseImage from './ParseImage';
+import ParseImage from "./ParseImage";
 
-export {
-    ParseImage
-}
+export { ParseImage };
